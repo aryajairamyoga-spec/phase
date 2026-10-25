@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Jairam Yoga - Customer Relationship Team</title>
+<style>
+:root{--g:#3d6a4e;--gd:#27432f;--gl:#e4eee4;--bg:#f3f0e8;--card:#fffefa;--ink:#212b25;--mu:#556158;--ln:#d9d4c5;--am:#8a5a00;--aml:#fbf0d4;--rd:#a23a2d;--rdl:#f8e2de}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,"Segoe UI",sans-serif}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.25;margin:0 0 .5rem;color:var(--gd)}
+h1{font-size:1.5rem}h2{font-size:1.4rem}h3{font-size:1.1rem}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:3px solid #1d5fd1;outline-offset:2px}
+header{background:var(--gd);color:#fff;padding:.9rem 1rem}
+header .in{max-width:1100px;margin:auto;display:flex;flex-wrap:wrap;gap:.75rem 1.5rem;align-items:center;justify-content:space-between}
+header h1{color:#fff;margin:0}
+header label{display:flex;gap:.5rem;align-items:center;font-size:.9rem}
+header input{padding:.4rem .6rem;border-radius:6px;border:0;min-width:11rem}
+.ban{background:var(--aml);color:#4d3300;border-bottom:1px solid #e3cf9a;padding:.55rem 1rem;font-size:.9rem}
+.ban div{max-width:1100px;margin:auto}
+nav{max-width:1100px;margin:1rem auto 0;padding:0 1rem;display:flex;flex-wrap:wrap;gap:.4rem}
+main{max-width:1100px;margin:1rem auto 4rem;padding:0 1rem}
+.btn{border:1px solid var(--g);background:#fff;color:var(--gd);padding:.5rem .9rem;border-radius:8px;cursor:pointer;min-height:2.5rem}
+.btn:hover{background:var(--gl)}
+.btn.p{background:var(--g);color:#fff}.btn.p:hover{background:var(--gd)}
+.btn.d{border-color:var(--rd);color:var(--rd)}
+.btn[aria-current=page],.btn[aria-selected=true]{background:var(--gl);font-weight:600;border-width:2px}
+.card{background:var(--card);border:1px solid var(--ln);border-radius:12px;padding:1.1rem;margin-bottom:1rem}
+.grid{display:grid;gap:.8rem;grid-template-columns:repeat(auto-fit,minmax(10.5rem,1fr))}
+.stat{text-align:left;cursor:pointer;background:var(--card);border:1px solid var(--ln);border-radius:12px;padding:.9rem}
+.stat:hover{border-color:var(--g)}
+.stat b{display:block;font:600 2rem Georgia,serif;color:var(--gd)}
+.row{display:grid;gap:.8rem;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr))}
+label.f{display:block;font-size:.9rem;color:var(--mu);font-weight:600}
+label.f input,label.f select,label.f textarea{display:block;width:100%;margin-top:.25rem;padding:.5rem .6rem;border:1px solid #b9b3a1;border-radius:8px;background:#fff;font-weight:400;color:var(--ink)}
+textarea{min-height:4.2rem;resize:vertical}
+.bd{display:inline-block;padding:.1rem .55rem;border-radius:99px;font-size:.8rem;font-weight:600;background:#ebe8de;color:var(--mu);margin:0 .25rem .25rem 0}
+.bd.ok{background:var(--gl);color:var(--gd)}.bd.pr{background:var(--aml);color:var(--am)}.bd.od{background:var(--rdl);color:var(--rd)}
+.srow{display:block;width:100%;text-align:left;background:var(--card);border:1px solid var(--ln);border-radius:10px;padding:.8rem 1rem;margin-bottom:.6rem;cursor:pointer}
+.srow:hover{border-color:var(--g)}
+.srow small{color:var(--mu);display:block}
+.it{border-top:1px solid var(--ln);padding:.9rem 0}
+.it:first-of-type{border-top:0}
+.chk{display:flex;gap:.6rem;align-items:flex-start;font-weight:600;cursor:pointer}
+.chk input{width:1.25rem;height:1.25rem;margin-top:.2rem;accent-color:var(--g)}
+details{margin:.4rem 0 .6rem 1.85rem;font-size:.92rem}
+summary{cursor:pointer;color:var(--g);font-weight:600}
+.sc{background:var(--gl);border-left:4px solid var(--g);padding:.6rem .8rem;margin:.4rem 0;border-radius:0 8px 8px 0;font-style:italic}
+.it>label.f,.it>div.sel{margin-left:1.85rem}
+.note{background:var(--aml);border:1px solid #e3cf9a;border-radius:8px;padding:.6rem .8rem;margin:.6rem 0;font-size:.92rem}
+.dg{display:grid;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));gap:.6rem 1rem;margin:0}
+.dg dt{font-size:.8rem;color:var(--mu);font-weight:600}.dg dd{margin:0 0 .3rem;overflow-wrap:anywhere}
+.empty{text-align:center;padding:2rem 1rem;color:var(--mu)}
+#toast{position:fixed;left:50%;bottom:1rem;transform:translateX(-50%);background:var(--gd);color:#fff;padding:.6rem 1rem;border-radius:8px;max-width:90vw;display:none;z-index:9}
+#toast.er{background:var(--rd)}
+table{border-collapse:collapse;width:100%;font-size:.92rem}td,th{border:1px solid var(--ln);padding:.4rem .6rem;text-align:left;vertical-align:top}
+.tabs{display:flex;flex-wrap:wrap;gap:.4rem;margin:.8rem 0}
+.mu{color:var(--mu);font-size:.9rem}
+</style></head>
+<body>
+<header><div class="in"><h1>Jairam Yoga: Customer Relationship Team</h1>
+<label id="mel">Working as <input id="me" autocomplete="name" placeholder="Your name (saved on every edit)"></label><span id="who" hidden></span></div></header>
+<div class="ban" role="note"><div id="bn"></div></div>
+<nav id="nav" aria-label="Main"></nav>
+<main id="app"></main>
+<div id="toast" role="status" aria-live="polite"></div>
+<script>
+const KEY="jy_crt_v1";
+const OPEN="Hello Ma'am/Sir, main Jairam Yoga Customer Relationship Team se [aapka naam] baat kar rahi hu. ";
+const OUT=["","Connected","No answer","Call back requested","Wrong or unreachable number"];
+const CALLS={
+c1:{t:"Call 1: New student",intro:OPEN+"Aapne humara Weight Loss / Health Issues batch purchase kiya hai, isi ke follow-up ke liye maine aapko call kiya hai.",items:[
+{k:"classapp",t:"Classes or app issues asked",s:"Main dekh sakti hu ki aap regular classes le rahe hain. Aapko classes ya application se related koi issue toh face nahi ho raha?"},
+{k:"dietvid",t:"Diet video watched?",s:"Kya aapne diet ki video dekh li hai? Agar nahi, toh please video ko zaroor dekhein aur usmein bataye gaye diet aur time duration ko achhe se samjhein.",h:"Ask this even if the student says everything is fine."},
+{k:"dietfol",t:"Diet guidelines followed regularly?",s:"Video dekhne ke baad, kya aap diet guidelines ko apne daily routine mein regularly follow kar rahe hain? Isse humein aapki diet consistency aur progress ko better understand karne mein help milegi.",h:"Ask this even if the student says everything is fine."},
+{k:"free",t:"Free videos awareness",s:"Agar student 'haan' bole: Aapko free videos ke baare mein pata hai? Kisi din agar class miss ho jaye, toh aap free videos dekhkar apna session complete kar sakte hain."},
+{k:"join",t:"Joining-process issues asked",s:"Join process mein koi issue toh nahi hai?"},
+{k:"chat",t:"App chat section awareness",s:"Aapko application ka chat section pata hai? Koi bhi issue ho toh aap chat box mein message kar sakte hain."},
+{k:"credit",t:"Credit points, streak and levels explained",s:"Agar student bole 'haan, yeh sab pata hai': Theek hai, main aapko ek aur cheez bata deti hu. Application mein aap credit points kama sakte hain. Jis din aap class attend karte hain, aapka streak 1 se badhta hai, aur 20 streak days complete karne par 1000 credit points milte hain. Saath hi levels bhi hain: 15-30 din par Yogi Level milta hai aur 100 credit points, aur 30+ din par Yoga Master Level milta hai aur 500 credit points."},
+{k:"ref",t:"Referral explained",s:"Jab aap apne family, friends ya kisi jaan-pehchaan wale ko refer karte hain aur woh course purchase karte hain, toh aap dono ko course value ka 50% credit points milta hai. Jaise Rs. 6000 ke course par dono ko 3000 credit points milte hain."},
+{k:"close",t:"Support guidance and closing",s:"Agar aapko shuru ke 15 din mein classes, application ya diet se related koi bhi problem face hoti hai, toh aap CRM team ko call kar sakte hain ya application ke chat box mein message kar sakte hain. Thank you, aapka din accha ho!"}]},
+c2:{t:"Call 2: Feedback only",intro:OPEN,tip:"Feedback only. Do not upsell on this call. If the student reports a problem, give a solution or forward it to the Customer Support team.",items:[
+{k:"att",t:"Attendance discussed",s:"Main dekh sakti hu ki aapne pichle 7 / 10 din proper classes li hain. Bahut accha!"},
+{k:"cls",t:"Class issues asked (timing, speed, asana difficulty)",s:"Aapko classes se related koi problem face toh nahi ho rahi? Jaise timing, class ki speed ya koi asana karne mein difficulty?"},
+{k:"app",t:"App issues asked (joining class, video playback, login)",s:"Application use karne mein koi issue toh nahi aa raha? Jaise class join karna, video chalna ya login?"},
+{k:"exp",t:"Overall experience asked",s:"Classes ko leke aapka overall experience kaisa hai?"},
+{k:"sol",t:"Solution provided or forwarded to Customer Support",s:"If the student reports a problem: provide the solution or forward it to the Customer Support team.",sel:["","No problem reported","Solution provided","Forwarded to Customer Support"]},
+{k:"close",t:"Closing",s:"Thank you Ma'am/Sir. Koi bhi issue ho toh application ke chat box mein message kar dijiye, hum help karenge."}]},
+c3:{t:"Call 3: Upsell conversation",intro:OPEN+"Aapki classes ka progress dekhkar maine aapko call kiya hai.",tip:"Frame this as helping the student continue their progress, never as pressure. Do not quote prices or offer terms from memory; share the current offer details through the payment link or WhatsApp.",items:[
+{k:"prog",t:"Progress or change asked (energy, flexibility, body pain, weight)",s:"Itne dino mein aapko koi change feel hua hai? Jaise energy, flexibility, body pain ya weight mein? Yeh bahut accha hai ki aap regular hain. Yoga mein asli result consistency se aata hai."},
+{k:"why",t:"Reason for extension explained",s:"Jo students apna course extend karte hain, unhe long-term mein bahut accha result milta hai, kyunki body ko naye routine mein settle hone mein time lagta hai. Extend karne se aapki progress continue rahegi aur beech mein gap nahi aayega."},
+{k:"perm",t:"Permission asked to share offer details",s:"Abhi extension par aapke liye best offers available hain. Kya main aapko uski details bata dun?"},
+{k:"next",t:"Next step",s:"Student ready ho toh payment link / process share karein. Na ho toh details WhatsApp par bhej dein aur follow-up ka time fix karein.",sel:["","Payment link / process shared","Details sent on WhatsApp, follow-up agreed","No next step agreed"]},
+{k:"o1",o:1,t:"Objection raised: Abhi sochna hai",s:"Koi baat nahi Ma'am/Sir, main offer ki details WhatsApp par bhej deti hu. Aap aaram se dekh lijiye."},
+{k:"o2",o:1,t:"Objection raised: Budget issue hai",s:"Main samajhti hu. Isiliye abhi jo best offers chal rahe hain, wo aapke kaam aa sakte hain."},
+{k:"o3",o:1,t:"Objection raised: Abhi result nahi dikha",s:"Itne kam time mein result dikhna shuru hota hai. Consistency rakhenge toh 3-4 hafte mein clearly farak dikhega."},
+{k:"o4",o:1,t:"Objection raised: Time nahi mil raha",s:"Agar kisi din class miss ho, toh free videos se session complete kar sakte hain. Isse aapka routine nahi tootega."}]}};
+const REF="<table><tr><th>Action</th><th>Reward (SOP)</th></tr><tr><td>Streak: +1 for each day a class is attended</td><td>20 streak days: 1000 credit points</td></tr><tr><td>1-15 days: Beginner Level</td><td>No credit points</td></tr><tr><td>15-30 days: Yogi Level</td><td>100 credit points</td></tr><tr><td>30+ days: Yoga Master Level</td><td>500 credit points</td></tr><tr><td>Referral: friend purchases a course</td><td>Both get 50% of course value as credit points. Example: Rs. 6000 course = 3000 credit points each</td></tr></table>";
+
+const $=id=>document.getElementById(id);
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const today=()=>new Date().toLocaleDateString("en-CA");
+const nowIso=()=>new Date().toISOString();
+const when=t=>t?new Date(t).toLocaleString():"";
+const nk=p=>{let d=String(p||"").replace(/\D/g,"");if(d.length==12&&d.startsWith("91"))d=d.slice(2);else if(d.length==11&&d[0]=="0")d=d.slice(1);return d};
+function load(){try{const r=JSON.parse(localStorage.getItem(KEY));if(r&&Array.isArray(r.students))return r}catch(e){}return{settings:{staff:"",w:{c1:[3,5],c2:[7,12],c3:null}},students:[]}}
+let S=load(),DB=null,USER=null,UID=null,CANW=true,CANA=true,NM={},SHARED=false,READY=true,UN=[];
+const BAN_LOCAL="<b>Local mode:</b> records are kept only in this browser on this device. They do not sync to other team members and are not saved to any server. Export a backup regularly (Backup tab).";
+const BAN_SHARED="<b>Shared mode:</b> records are saved to this page's shared database and every person who can open this page with Contributor access or above sees and edits the same records. Access is controlled only by this page's sharing settings, so share it with CRT staff only. Last edit wins if two people save the same student at once.";
+const nm=i=>NM[i]||(SHARED&&i?"A team member":i||"");
+function setBan(){$("bn").innerHTML=(SHARED?BAN_SHARED:BAN_LOCAL)+(SHARED&&!CANW?" <b>You have view-only access and cannot edit.</b>":"")}
+const ui={v:"dash",sid:null,tab:"profile",q:"",f:"all",edit:false};
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S));return true}catch(e){toast("Could not save to this browser's storage. Export a backup now.",1);return false}}
+function toast(m,er){const t=$("toast");t.textContent=m;t.className=er?"er":"";t.style.display="block";clearTimeout(toast.h);toast.h=setTimeout(()=>t.style.display="none",er?6000:2500)}
+const me=()=>SHARED?(UID||""):(S.settings.staff||"").trim();
+function needMe(){if(SHARED&&!CANW){toast("You have view-only access and cannot edit.",1);return false}if(me())return true;toast("Enter your name in 'Working as' at the top first.",1);$("me").focus();return false}
+const stu=id=>S.students.find(s=>s.id==id);
+const log=(s,msg)=>{s.log=s.log||[];s.log.push({at:nowIso(),by:me(),msg})};
+const staffName=()=>SHARED?(NM[UID]||""):me();
+
+async function persist(s,patch,oldKey){if(!SHARED)return save();
+ try{const d=DB.doc("students/"+s.phoneKey);if(patch)await d.update(patch);else await d.set(JSON.parse(JSON.stringify(s)));
+  if(oldKey&&oldKey!=s.phoneKey)await DB.doc("students/"+oldKey).delete();return true}
+ catch(e){toast("Could not save to the shared database ("+(e&&e.code||"error")+"). Your change was not saved.",1);return false}}
+async function persistSettings(){if(!SHARED)return save();try{await DB.doc("config/settings").set(JSON.parse(JSON.stringify(S.settings)));return true}catch(e){toast("Could not save settings ("+(e&&e.code||"error")+").",1);return false}}
+function formBusy(){const a=document.activeElement;return ui.v=="new"||ui.edit||["c1","c2","c3"].includes(ui.tab)&&ui.v=="stu"||(a&&/INPUT|TEXTAREA|SELECT/.test(a.tagName))}
+async function names(){const ids=new Set();S.students.forEach(s=>{[s.createdBy,s.updatedBy].forEach(x=>x&&ids.add(x));(s.log||[]).forEach(l=>l.by&&ids.add(l.by));Object.values(s.calls||{}).forEach(c=>c.savedBy&&ids.add(c.savedBy))});
+ const need=[...ids].filter(i=>!NM[i]);if(!need.length||!USER)return;try{const p=await USER.profiles(need);need.forEach(i=>NM[i]=(p[i]&&p[i].name)||"A team member")}catch(e){}}
+async function initShared(){try{if(!window.claude)return;DB=await claude.use("db");USER=await claude.use("user");if(!DB||!USER)return;
+  UID=await USER.id();if(!UID){DB=null;return}SHARED=true;READY=false;CANW=(await USER.can("data.write"))!==false;CANA=await USER.canEdit();
+  const me0=await USER.me();NM[UID]=me0.name||"You";$("mel").hidden=true;$("who").hidden=false;$("who").textContent="Signed in as "+(me0.name||"a team member");
+  S.students=[];S.settings={staff:"",w:{c1:[3,5],c2:[7,12],c3:null}};render();
+  UN.push(DB.doc("config/settings").onSnapshot(sn=>{if(sn.exists)S.settings=Object.assign({staff:""},sn.data());if(!formBusy())render(1)},e=>toast("Settings could not be read ("+e.code+").",1)));
+  UN.push(DB.collection("students").onSnapshot(async sn=>{S.students=sn.docs.map(d=>JSON.parse(JSON.stringify(d.data())));READY=true;await names();if(formBusy())toast("A colleague updated records. Finish or save what you are doing to see the latest.");else render(1)},e=>{READY=true;toast("Records could not be read ("+e.code+"). Contributor access or above is needed.",1);render(1)}))}
+ catch(e){SHARED=false;DB=null}}
+const dayNo=s=>s.joined?Math.floor((new Date(today())-new Date(s.joined))/864e5)+1:null;
+const stat=(s,c)=>(s.calls&&s.calls[c]&&s.calls[c].status)||"none";
+function phase(s,c){if(stat(s,c)=="complete")return"done";const d=dayNo(s),w=S.settings.w[c];if(c=="c3"&&w==null)return"na";if(d==null)return"na";const a=c=="c3"?w:w[0],b=c=="c3"?null:w[1];return d<a?"later":(b!=null&&d>b?"overdue":"due")}
+const isDue=(s,c)=>["due","overdue"].includes(phase(s,c));
+function badge(s,c){const n=c.slice(1),st=stat(s,c),p=phase(s,c);
+ if(st=="complete")return`<span class="bd ok">Call ${n} complete</span>`;
+ if(st=="in_progress")return`<span class="bd pr">Call ${n} in progress</span>`;
+ if(p=="overdue")return`<span class="bd od">Call ${n} overdue</span>`;
+ if(p=="due")return`<span class="bd pr">Call ${n} due</span>`;
+ if(p=="na")return`<span class="bd">Call ${n} timing not set</span>`;
+ return`<span class="bd">Call ${n} not yet due</span>`}
+const fuDue=s=>s.followUp&&s.followUp<=today();
+const FILT={all:["All students",()=>1],c1:["Call 1 due or overdue",s=>isDue(s,"c1")],c2:["Call 2 due or overdue",s=>isDue(s,"c2")],c3:["Call 3 due",s=>isDue(s,"c3")],prog:["Calls in progress",s=>["c1","c2","c3"].some(c=>stat(s,c)=="in_progress")],fu:["Follow-up due or overdue",fuDue],none:["No call recorded",s=>["c1","c2","c3"].every(c=>stat(s,c)=="none")]};
+
+/* shell */
+function nav(){const t=[["dash","Dashboard"],["list","Students"],["data","Backup and settings"],["priv","Privacy and deployment"]];
+ $("nav").innerHTML=t.map(([k,l])=>`<button class="btn" data-v="${k}" ${ui.v==k||(k=="list"&&ui.v=="stu")?'aria-current="page"':""}>${l}</button>`).join("")+`<button class="btn p" data-v="new">Add student</button>`}
+document.addEventListener("click",e=>{const b=e.target.closest("[data-v]");if(!b)return;const v=b.dataset.v;if(b.dataset.f){ui.f=b.dataset.f;ui.q=""}
+ if(v=="new"){ui.v="new"}else if(v=="stu"){ui.v="stu";ui.sid=b.dataset.id;ui.tab="profile";ui.edit=false}else ui.v=v;render()});
+$("me").value=S.settings.staff||"";
+$("me").addEventListener("input",e=>{if(!SHARED){S.settings.staff=e.target.value;save()}});
+function render(keep){setBan();nav();const a=$("app");({dash:vDash,list:vList,new:vForm,stu:vStu,data:vData,priv:vPriv})[ui.v](a);if(!keep)window.scrollTo(0,0)}
+
+/* dashboard */
+function vDash(a){const n=S.students.length;
+ a.innerHTML=`<h2>Overview</h2><div class="card"><label class="f">Search by phone number or name<input id="dq" type="search" placeholder="Type a phone number before you call"></label></div>
+ <div class="grid">${Object.entries(FILT).map(([k,[l,fn]])=>`<button class="stat" data-v="list" data-f="${k}"><b>${S.students.filter(fn).length}</b>${l}</button>`).join("")}</div>
+ ${n?"":`<div class="card empty" style="margin-top:1rem"><h3>No students yet</h3><p>Add the first student record when a student joins a course.</p><button class="btn p" data-v="new">Add student</button></div>`}
+ <p class="mu">Call windows follow the SOP (Call 1: days 3-5, Call 2: days 7-12). Call 3 timing is not set by the SOP; set it under Backup and settings. Day 1 is the joining date.</p>`;
+ $("dq").addEventListener("keydown",e=>{if(e.key=="Enter"){ui.q=e.target.value;ui.f="all";ui.v="list";render()}})}
+
+/* list */
+function match(s,q){q=q.trim().toLowerCase();if(!q)return 1;const d=q.replace(/\D/g,"");if(d.length>=3&&/^[\d\s+()-]+$/.test(q))return nk(s.phone).includes(nk(d))||s.phone.replace(/\D/g,"").includes(d);return s.name.toLowerCase().includes(q)}
+function vList(a){a.innerHTML=`<h2>Students</h2><div class="card"><div class="row"><label class="f">Search by phone number or name<input id="lq" type="search" value="${esc(ui.q)}"></label>
+ <label class="f">Attention filter<select id="lf">${Object.entries(FILT).map(([k,[l]])=>`<option value="${k}" ${ui.f==k?"selected":""}>${l}</option>`).join("")}</select></label></div><p style="margin:.8rem 0 0"><button class="btn" id="lc">Export these results as CSV (Excel)</button></p></div><div id="res" aria-live="polite"></div>`;
+ let r=[];$("lc").onclick=()=>r.length?csvDl(r,"jairam-yoga-crt-students"):toast("No students to export.",1);
+ const res=()=>{r=S.students.filter(s=>match(s,ui.q)&&FILT[ui.f][1](s)).sort((x,y)=>(y.createdAt||"").localeCompare(x.createdAt||""));
+  $("res").innerHTML=r.length?`<p class="mu">${r.length} of ${S.students.length} students</p>`+r.map(s=>`<button class="srow" data-v="stu" data-id="${esc(s.id)}"><b>${esc(s.name)}</b> &nbsp;${esc(s.phone)}<small>${esc(s.course||"Course not entered")}${s.batch?", "+esc(s.batch):""}. Joined ${esc(s.joined)}${dayNo(s)?" (day "+dayNo(s)+")":""}. ${s.staff?"Assigned to "+esc(s.staff)+".":""}${s.followUp?" Follow-up "+esc(s.followUp)+(fuDue(s)?" (due)":"")+".":""}</small><span style="margin-top:.4rem;display:block">${["c1","c2","c3"].map(c=>badge(s,c)).join("")}</span></button>`).join(""):`<div class="card empty">${S.students.length?"No student matches this search or filter. Check the number or clear the filter.":"No students yet. Use Add student to create the first record."}</div>`};
+ $("lq").oninput=e=>{ui.q=e.target.value;res()};$("lf").onchange=e=>{ui.f=e.target.value;res()};res()}
+
+/* add / edit form */
+const FIELDS=[["name","Student name","text",1],["phone","Phone number (unique)","tel",1],["age","Age","number"],["height","Height (cm)","number"],["weight","Weight (kg)","number"],["course","Course / batch","text"],["batch","Batch timing","text"],["joined","Joining date","date",1],["staff","Assigned staff","text"],["followUp","Follow-up date","date"]];
+function formHtml(s){return`<form id="sf" novalidate><div class="row">${FIELDS.map(([k,l,t,r])=>`<label class="f">${l}${r?" (required)":""}<input name="${k}" type="${t}" ${t=="number"?'min="0" step="any"':""} value="${esc(s[k]??(k=="joined"?today():k=="staff"?staffName():""))}" ${r?"required":""}></label>`).join("")}</div>
+ <label class="f" style="margin-top:.8rem">Medical issue (only as shared by the student)<textarea name="medical">${esc(s.medical)}</textarea></label>
+ <label class="f" style="margin-top:.8rem">Notes<textarea name="notes">${esc(s.notes)}</textarea></label>
+ <p style="margin-top:1rem"><button class="btn p" type="submit">${s.id?"Save changes":"Add student"}</button> <button class="btn" type="button" id="cx">Cancel</button></p></form>`}
+function bindForm(id){$("sf").onsubmit=async e=>{e.preventDefault();if(!needMe())return;const f=new FormData($("sf")),v={};FIELDS.concat([["medical"],["notes"]]).forEach(([k])=>v[k]=String(f.get(k)||"").trim());
+  if(!v.name||!v.phone||!v.joined){toast("Name, phone number and joining date are required.",1);return}
+  const key=nk(v.phone);if(key.length<7||key.length>15){toast("Enter a valid phone number (7 to 15 digits).",1);return}
+  const dup=S.students.find(x=>nk(x.phone)==key&&x.id!=id)||(SHARED&&(!id||oldKey!=key)&&(await DB.doc("students/"+key).get()).exists&&{name:"another student"});if(dup){toast(`This phone number already belongs to ${dup.name}. Open that record instead.`,1);return}
+  const oldKey=id?stu(id).phoneKey:null;let s=id?stu(id):{id:"s"+Date.now().toString(36)+Math.random().toString(36).slice(2,6),createdAt:nowIso(),createdBy:me(),calls:{},log:[]};
+  if(id){const ch=Object.keys(v).filter(k=>(s[k]||"")!=v[k]);if(!ch.length){toast("No changes to save.");ui.edit=false;render();return}log(s,"Profile edited: "+ch.join(", "))}else log(s,"Student record created");
+  Object.assign(s,v);s.phoneKey=key;s.updatedAt=nowIso();s.updatedBy=me();if(!id&&!SHARED)S.students.push(s);
+  if(await persist(s,null,oldKey)){if(SHARED&&!S.students.find(x=>x.id==s.id))S.students.push(s);toast(id?"Changes saved":"Student added");ui.v="stu";ui.sid=s.id;ui.edit=false;if(!id)ui.tab="profile";render()}};
+  $("cx").onclick=()=>{ui.v=id?"stu":"list";ui.edit=false;render()}}
+function vForm(a){a.innerHTML=`<h2>Add student</h2><div class="card">${formHtml({})}</div>`;bindForm(null)}
+
+/* student */
+function digest(s,cs){return cs.map(c=>{const r=s.calls[c];if(!r)return`<h3>${CALLS[c].t}</h3><p class="mu">Not recorded yet.</p>`;
+ return`<h3>${CALLS[c].t}</h3><p class="mu">${r.status=="complete"?"Complete":"In progress (not complete)"}. ${esc(r.date||"No date")}, ${esc(r.staff||"no staff")}, outcome: ${esc(r.outcome||"not set")}. Last saved ${when(r.savedAt)}.</p><ul>${CALLS[c].items.map(it=>{const x=(r.items||{})[it.k]||{};return x.done||x.note||x.sel?`<li><b>${esc(it.t)}</b>${x.done?" (done)":""}${x.sel?": "+esc(x.sel):""}${x.note?"<br>"+esc(x.note).replace(/\n/g,"<br>"):""}</li>`:""}).join("")||"<li class='mu'>No items recorded.</li>"}</ul>${r.general?`<p><b>General notes:</b> ${esc(r.general).replace(/\n/g,"<br>")}</p>`:""}`}).join("")}
+function vStu(a){const s=stu(ui.sid);if(!s){ui.v="list";return render()}
+ const T=[["profile","Profile"],["c1","Call 1"],["c2","Call 2"],["c3","Call 3"],["hist","History"]];
+ a.innerHTML=`<p><button class="btn" data-v="list">Back to students</button></p><div class="card"><h2>${esc(s.name)}</h2><p style="margin:0 0 .4rem">${esc(s.phone)}${dayNo(s)?", day "+dayNo(s)+" since joining":""}</p>${["c1","c2","c3"].map(c=>badge(s,c)).join("")}${fuDue(s)?'<span class="bd od">Follow-up due '+esc(s.followUp)+"</span>":""}
+ <div class="tabs" role="tablist">${T.map(([k,l])=>`<button class="btn" role="tab" aria-selected="${ui.tab==k}" data-t="${k}">${l}</button>`).join("")}</div></div><div id="tb"></div>`;
+ a.querySelectorAll("[data-t]").forEach(b=>b.onclick=()=>{ui.tab=b.dataset.t;ui.edit=false;vStu(a)});
+ const tb=$("tb");
+ if(ui.tab=="profile"){if(ui.edit){tb.innerHTML=`<div class="card"><h3>Edit profile</h3>${formHtml(s)}</div>`;bindForm(s.id)}else{
+  tb.innerHTML=`<div class="card"><dl class="dg">${[...FIELDS,["medical","Medical issue (as shared)"],["notes","Notes"]].map(([k,l])=>`<div><dt>${l}</dt><dd>${esc(s[k])||'<span class="mu">Not entered</span>'}</dd></div>`).join("")}</dl>
+  <p class="mu">Last updated ${when(s.updatedAt)} by ${esc(nm(s.updatedBy))}. Created ${when(s.createdAt)} by ${esc(nm(s.createdBy))}.</p><button class="btn p" id="ed">Edit profile</button> ${!SHARED||CANA?'<button class="btn d" id="dl">Delete student</button>':""}</div>`;
+  $("ed").onclick=()=>{ui.edit=true;vStu(a)};$("dl").onclick=()=>{if(confirm("Delete "+s.name+" and all call records"+(SHARED?" for the whole team":" from this browser")+"? Export a backup first. This cannot be undone.")){(async()=>{if(SHARED){try{await DB.doc("students/"+s.phoneKey).delete()}catch(e){toast("Could not delete.",1);return}}else{S.students=S.students.filter(x=>x.id!=s.id);save()}ui.v="list";render()})()}}}}
+ else if(ui.tab=="hist"){tb.innerHTML=`<div class="card"><h3>Saved call records</h3>${digest(s,["c1","c2","c3"])}</div><div class="card"><h3>Change log</h3>${(s.log||[]).slice().reverse().map(l=>`<p style="margin:.2rem 0">${when(l.at)}: ${esc(l.msg)} <span class="mu">(${esc(nm(l.by))})</span></p>`).join("")||'<p class="mu">No entries.</p>'}</div>`}
+ else callTab(s,ui.tab,tb)}
+
+/* call form */
+function callTab(s,c,tb){const C=CALLS[c],r=s.calls[c]||{items:{}},done=r.status=="complete",it=r.items||{},w=S.settings.w[c];
+ const win=c=="c3"?(w==null?"Timing not set (confirm with the business)":"Configured to start on day "+w):"SOP window: days "+w[0]+" to "+w[1];
+ tb.innerHTML=`<div class="card"><h3>${C.t}</h3><p class="mu">${win}. Status: <b>${done?"Complete":r.status=="in_progress"?"In progress":"Not started"}</b>.${r.savedAt?" Last saved "+when(r.savedAt)+" by "+esc(nm(r.savedBy))+".":""}</p>
+ <details open style="margin-left:0"><summary>Opening script (SOP prompt, not a recorded answer)</summary><p class="sc">${esc(C.intro)}</p></details>${C.tip?`<div class="note"><b>Staff guidance:</b> ${esc(C.tip)}</div>`:""}
+ ${c=="c3"?`<details style="margin-left:0"><summary>Student profile and saved Call 1 / Call 2 notes</summary>${digest(s,["c1","c2"])}<p class="mu">Age ${esc(s.age||"-")}, height ${esc(s.height||"-")} cm, weight ${esc(s.weight||"-")} kg. Medical issue as shared: ${esc(s.medical||"none entered")}. Course: ${esc(s.course||"-")}.</p></details>`:""}
+ <div class="row" style="margin:.8rem 0"><label class="f">Call date<input type="date" id="cd" value="${esc(r.date||today())}"></label><label class="f">Staff on this call<input id="cs" value="${esc(r.staff||staffName())}"></label>
+ <label class="f">Outcome<select id="co">${OUT.map(o=>`<option ${r.outcome==o?"selected":""}>${o}</option>`).join("")}</select></label></div>
+ ${C.items.map(i=>{const x=it[i.k]||{};return`<div class="it"><label class="chk"><input type="checkbox" data-k="${i.k}" ${x.done?"checked":""}> ${esc(i.t)}${i.o?' <span class="mu">(optional)</span>':""}</label>
+ <details><summary>SOP prompt for staff</summary><p class="sc">${esc(i.s)}</p>${i.h?`<p class="mu">${esc(i.h)}</p>`:""}</details>
+ ${i.sel?`<div class="sel"><label class="f">Recorded result<select data-s="${i.k}">${i.sel.map(o=>`<option ${x.sel==o?"selected":""}>${o}</option>`).join("")}</select></label></div>`:""}
+ <label class="f">Student's actual response / notes<textarea data-n="${i.k}">${esc(x.note)}</textarea></label></div>`}).join("")}
+ ${c=="c3"?`<label class="f" style="margin-top:.6rem">Agreed follow-up date (also updates the student's follow-up date)<input type="date" id="cf" value="${esc(s.followUp||"")}"></label>`:""}
+ <label class="f" style="margin-top:.8rem">General notes<textarea id="cg">${esc(r.general)}</textarea></label>
+ <p class="mu">Mark complete is available only when the outcome is Connected and every required item is ticked. Save progress never marks a call complete.</p>
+ <p><button class="btn p" id="sv">${done?"Save changes":"Save progress"}</button> ${done?'<button class="btn" id="ro">Reopen call</button>':'<button class="btn p" id="mc">Mark complete</button>'}</p></div>
+ ${c=="c1"?`<details style="margin-left:0" class="card"><summary>Credit points quick reference (SOP)</summary>${REF}</details>`:""}
+ ${c=="c3"?`<details style="margin-left:0" class="card"><summary>Credit points quick reference (SOP)</summary>${REF}</details>`:""}`;
+ const gather=()=>{const o={};C.items.forEach(i=>{const q=n=>tb.querySelector(`[${n}="${i.k}"]`);o[i.k]={done:q("data-k").checked,note:q("data-n").value.trim()};if(i.sel)o[i.k].sel=q("data-s").value});return o};
+ const commit=async(complete,reopen)=>{if(!needMe())return;const items=gather(),date=$("cd").value,staff=$("cs").value.trim(),out=$("co").value;
+  if(complete){const miss=C.items.filter(i=>!i.o&&!items[i.k].done);if(!date||!staff||out!="Connected"){toast("To complete: set call date, staff and outcome 'Connected'.",1);return}if(miss.length){toast(miss.length+" required item(s) not ticked: "+miss.map(i=>i.t).join("; "),1);return}}
+  const n=nowIso(),rec=Object.assign({},s.calls[c],{items,date,staff,outcome:out,general:$("cg").value.trim(),savedAt:n,savedBy:me()});
+  rec.status=reopen?"in_progress":complete?"complete":(s.calls[c]?.status||"in_progress");if(complete)rec.completedAt=n;
+  s.calls[c]=rec;if(c=="c3"){const f=$("cf").value;if(f!=(s.followUp||"")){s.followUp=f;log(s,"Follow-up date set to "+(f||"none")+" in Call 3")}}
+  log(s,C.t+(reopen?" reopened":complete?" marked complete":" saved ("+rec.status.replace("_"," ")+")"));s.updatedAt=n;s.updatedBy=me();
+  const patch=SHARED?{calls:{[c]:rec},log:s.log,followUp:s.followUp||"",updatedAt:n,updatedBy:me()}:null;
+  if(await persist(s,patch)){toast(reopen?"Call reopened":complete?"Call marked complete":"Progress saved");vStu($("app"))}};
+ $("sv").onclick=()=>commit(0);if($("mc"))$("mc").onclick=()=>commit(1);if($("ro"))$("ro").onclick=()=>commit(0,1)}
+
+async function saveFile(fn,data,type,msg){if(window.claude){try{const d=await claude.use("downloads");if(d){await d.save({filename:fn,data});toast(msg||"File ready");return}}catch(e){if(e&&e.code!="unavailable"){toast("Save cancelled or failed.",1);return}}}
+ const b=new Blob([data],{type}),u=URL.createObjectURL(b),l=document.createElement("a");l.href=u;l.download=fn;l.click();URL.revokeObjectURL(u);toast(msg||"File downloaded")}
+/* CSV export (opens in Excel / Google Sheets) */
+function csvDl(list,name){const H=["Name","Phone","Age","Height cm","Weight kg","Medical issue","Course","Batch timing","Joining date","Assigned staff","Follow-up date","Notes","Last updated","Updated by"];
+ ["c1","c2","c3"].forEach(c=>{const n=c.slice(1);H.push(`Call ${n} status`,`Call ${n} date`,`Call ${n} staff`,`Call ${n} outcome`,`Call ${n} general notes`);CALLS[c].items.forEach(i=>{H.push(`C${n} ${i.t}: done`);if(i.sel)H.push(`C${n} ${i.t}: result`);H.push(`C${n} ${i.t}: notes`)})});
+ const q=v=>{v=String(v??"");if(/^[=+\-@\t\r]/.test(v))v="'"+v;return'"'+v.replace(/"/g,'""')+'"'};
+ const rows=list.map(s=>{const r=[s.name,String(s.phone||"").replace(/[^\d+\s()-]/g,""),s.age,s.height,s.weight,s.medical,s.course,s.batch,s.joined,s.staff,s.followUp,s.notes,s.updatedAt,s.updatedBy].map((v,i)=>i==1?'"'+v+'"':q(v));
+  ["c1","c2","c3"].forEach(c=>{const k=s.calls[c]||{},it=k.items||{};r.push(q({complete:"Complete",in_progress:"In progress"}[k.status]||"Not started"),q(k.date),q(k.staff),q(k.outcome),q(k.general));CALLS[c].items.forEach(i=>{const x=it[i.k]||{};r.push(q(x.done?"Yes":"No"));if(i.sel)r.push(q(x.sel));r.push(q(x.note))})});return r.join(",")});
+ saveFile(name+"-"+today()+".csv","\ufeff"+[H.map(q).join(","),...rows].join("\r\n"),"text/csv;charset=utf-8",list.length+" student(s) exported")}
+/* backup + settings */
+function vData(a){const w=S.settings.w;
+ a.innerHTML=`<h2>Backup and settings</h2><div class="card"><h3>Back up browser-local records</h3><p>${SHARED?"Records are saved in the shared database, but you should still keep your own backups.":"All records live only in this browser. Clearing browser data or switching device loses them."} Export a JSON file regularly (JSON is the only format that can be re-imported; CSV is for Excel and reports). Keep exports somewhere safe; they contain health-related data, so treat them as confidential.</p>
+ <button class="btn p" id="ex">Export JSON backup</button> <button class="btn" id="ec">Export all data as CSV (Excel)</button> <label class="btn" style="display:inline-block">Import JSON backup<input id="im" type="file" accept="application/json,.json" hidden></label>
+ <p class="mu">Importing replaces all records in this browser. Export first if you are unsure.</p></div>
+ <div class="card"><h3>Call timing (day 1 = joining date)</h3><div class="row">
+ <label class="f">Call 1 from day<input type="number" min="1" id="a1" value="${w.c1[0]}"></label><label class="f">Call 1 to day<input type="number" min="1" id="b1" value="${w.c1[1]}"></label>
+ <label class="f">Call 2 from day<input type="number" min="1" id="a2" value="${w.c2[0]}"></label><label class="f">Call 2 to day<input type="number" min="1" id="b2" value="${w.c2[1]}"></label>
+ <label class="f">Call 3 starts on day (blank = not set)<input type="number" min="1" id="a3" value="${w.c3??""}"></label></div>
+ <p class="mu">Defaults come from the SOP (Call 1 days 3-5, Call 2 days 7-12). The SOP gives no Call 3 timing, so it stays blank until the business decides.</p><button class="btn p" id="ts">Save timing</button></div>`;
+ $("ec").onclick=()=>csvDl(S.students,"jairam-yoga-crt-all-students");$("ex").onclick=()=>{saveFile("jairam-yoga-crt-backup-"+today()+".json",JSON.stringify({exportedAt:nowIso(),...S},null,1),"application/json")};
+ $("im").onchange=e=>{const f=e.target.files[0];if(!f)return;f.text().then(async t=>{try{const d=JSON.parse(t);if(!d||!Array.isArray(d.students)||!d.settings)throw 0;if(SHARED){if(!CANA){toast("Only editors can import a backup.",1);return}if(!confirm("Add or overwrite "+d.students.length+" records in the shared database (matched by phone number)?"))return;let n=0;for(const x of d.students){if(!x.phoneKey)continue;try{await DB.doc("students/"+x.phoneKey).set(x);n++}catch(e){toast("Import stopped after "+n+" records ("+(e.code||"error")+").",1);return}}toast(n+" records imported");return}if(!confirm("Replace all "+S.students.length+" records in this browser with "+d.students.length+" imported records?"))return;S={settings:d.settings,students:d.students};$("me").value=S.settings.staff||"";save();toast("Backup imported");render()}catch(x){toast("This file is not a valid backup.",1)}})};
+ $("ts").onclick=()=>{const g=i=>parseInt($(i).value,10),v=[g("a1"),g("b1"),g("a2"),g("b2")];if(v.some(x=>!(x>0))||v[0]>v[1]||v[2]>v[3]){toast("Enter valid day numbers (from must not exceed to).",1);return}const c3=g("a3");if(SHARED&&!CANA){toast("Only editors can change call timing.",1);return}S.settings.w={c1:[v[0],v[1]],c2:[v[2],v[3]],c3:c3>0?c3:null};persistSettings().then(ok=>ok&&toast("Timing saved"))}}
+
+function vPriv(a){a.innerHTML=`<h2>Privacy and deployment</h2><div class="card"><p>Student profiles can contain health-related information (age, height, weight, medical issue). Collect and enter only what the student has shared.</p>
+ <p><b>${SHARED?"Shared mode.":"Local mode."}</b> ${SHARED?"Records are stored in this page's shared database. Only people you share the page with can open it, and Contributor access or above is needed to read or edit records. Viewer and Commenter links cannot read them. Editors and the owner can also delete students, import backups and change call timing in this app, but any Contributor can write to records, so this is not strict role-based security. The app adds its own change log, not a tamper-proof audit trail. Backup and CSV files are plain text.":"Records are in this browser only (localStorage) with no login, no encryption and no access control, and do not sync. Not suitable for team use. Backup files are plain text."}</p>
+ <p><b>For regulated or long-term use</b>, deploy behind authentication with role-based access, secure shared storage, automated backups and appropriate access controls (audit logs, least-privilege roles, encryption in transit and at rest). Review applicable data-protection obligations with the business owner.</p></div>`}
+render();
+initShared();
+</script></body></html>
